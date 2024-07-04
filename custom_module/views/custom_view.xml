@@ -1,0 +1,15 @@
+ 
+<odoo>
+    <record id="view_custom_model_form" model="ir.ui.view">
+        <field name="name">custom.model.form</field>
+        <field name="model">custom.model</field>
+        <field name="arch" type="xml">
+            <form string="Custom Model">
+                <group>
+                    <field name="name"/>
+                    <field name="description"/>
+                </group>
+            </form>
+        </field>
+    </record>
+</odoo>
