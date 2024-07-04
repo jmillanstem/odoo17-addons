@@ -8,7 +8,7 @@
     'category': 'Uncategorized',
     'depends': ['base'],
     'data': [
-        'views/custom_view.xml',
+        'views/custom_invoice_view.xml',
     ],
     'installable': True,
     'application': False,

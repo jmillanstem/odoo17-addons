@@ -1,0 +1,31 @@
+/*
+    © 2024 Jaime Millán <jmillan@stemdo.io>
+*/
+
+.additional_info, .custom_date, .project_details, .delivery_date, .detailed_description {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    margin-bottom: 20px;
+
+    strong {
+        color: #2c3e50;
+        font-size: 16px;
+    }
+
+    p {
+        color: #34495e;
+        font-size: 14px;
+        margin: 5px 0 0 0;
+    }
+}
+
+.project_details a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.project_details a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,37 @@
+<!--
+    © 2024 Jaime Millán <jmillan@stemdo.io>
+-->
+<odoo>
+    <template id="report_invoice_document_custom" inherit_id="account.report_invoice_document">
+        <xpath expr="//div[@class='text-muted mb-3']" position="before">
+            <div class="additional_info" t-if="o.additional_info">
+                <strong>Additional Information:</strong>
+                <p t-esc="o.additional_info"/>
+            </div>
+            <div class="custom_date" t-if="o.custom_date">
+                <strong>Custom Date:</strong>
+                <p t-esc="o.custom_date"/>
+            </div>
+            <div class="project_details" t-if="o.project_url or o.project_manager or o.project_status">
+                <strong>Project Details:</strong>
+                <p t-if="o.project_url"><strong>URL:</strong> <a t-att-href="o.project_url" t-esc="o.project_url"/></p>
+                <p t-if="o.project_manager"><strong>Manager:</strong> <t t-esc="o.project_manager.name"/></p>
+                <p t-if="o.project_status"><strong>Status:</strong> <t t-esc="o.project_status"/></p>
+            </div>
+            <div class="delivery_date" t-if="o.delivery_date">
+                <strong>Delivery Date:</strong>
+                <p t-esc="o.delivery_date"/>
+            </div>
+            <div class="detailed_description" t-if="o.detailed_description">
+                <strong>Detailed Description:</strong>
+                <p t-esc="o.detailed_description"/>
+            </div>
+        </xpath>
+<!--        <xpath expr="//table[@class='table table-sm o_main_table table-borderless']/thead/tr/th[last()]" position="after">-->
+<!--            <th class="text-right">Comment</th>-->
+<!--        </xpath>-->
+<!--        <xpath expr="//table[@class='table table-sm o_main_table table-borderless']/tbody/t[@t-foreach='lines']/tr/t[@name='account_invoice_line_accountable']/td[@name='td_subtotal']" position="after">-->
+<!--            <td class="text-right" t-esc="l.line_comment"/>-->
+<!--        </xpath>-->
+    </template>
+</odoo>
