@@ -27,11 +27,11 @@
                 <p t-esc="o.detailed_description"/>
             </div>
         </xpath>
-<!--        <xpath expr="//table[@class='table table-sm o_main_table table-borderless']/thead/tr/th[last()]" position="after">-->
-<!--            <th class="text-right">Comment</th>-->
-<!--        </xpath>-->
-<!--        <xpath expr="//table[@class='table table-sm o_main_table table-borderless']/tbody/t[@t-foreach='lines']/tr/t[@name='account_invoice_line_accountable']/td[@name='td_subtotal']" position="after">-->
-<!--            <td class="text-right" t-esc="l.line_comment"/>-->
-<!--        </xpath>-->
+<!--        <xpath expr="//table[@class='table table-sm o_main_table table-borderless']/thead/tr/th[last()]" position="after">
+            <th class="text-right">Comment</th>
+        </xpath>
+        <xpath expr="//table[@class='table table-sm o_main_table table-borderless']/tbody/t[@t-foreach='lines']/tr/t[@name='account_invoice_line_accountable']/td[@name='td_subtotal']" position="after">
+            <td class="text-right" t-esc="l.line_comment"/>
+        </xpath>-->
     </template>
 </odoo>
